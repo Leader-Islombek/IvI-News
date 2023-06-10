@@ -4,7 +4,6 @@
 {% block title %}Foydalanuvchi profili{% endblock title %}
 
 {% block content %}
-    <h3>__________________________________________________________________________________________________________</h3>
     <h3>Xush kelibsiz, {{ user.username }}</h3>
     <h3><a href="{% url 'logout' %}" class="text-danger" style="position: absolute; left: 1400px; bottom: 630px;">Log out</a> </h3>
     <h2>Siz haqingizdagi ma'lumotlar</h2>
@@ -18,5 +17,4 @@
     <h4><a href="{% url 'password_change' %}" style="color: red">Parolni almashtirish</a>|
     <a href="{% url 'edit_user_information' %}" style="color:red">Profilni o'zgartirish</a> </h4>
 
-    <h3>__________________________________________________________________________________________________________</h3>
 {% endblock content %}

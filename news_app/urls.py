@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import news_list, news_detail, ContactPageView, HomePageView, \
     LocalNewsView, ForeignNewsView, TechnologyNewsView, SportNewsView, NewsUpdateView, \
-    NewsDeleteView, NewsCreateView, admin_page_view, SearchResultsList, AboutView
+    NewsDeleteView, NewsCreateView, admin_page_view, SearchResultsList, AboutView, errorpage
 
 urlpatterns = [
     path('', HomePageView.as_view(), name='home_page'),
@@ -17,5 +17,6 @@ urlpatterns = [
     path('sport/', SportNewsView.as_view(), name='sport_news_page'),
     path('adminpage/', admin_page_view, name='admin_page'),
     path('searchresult/', SearchResultsList.as_view(), name='search_results'),
-    path('about/', AboutView, name='about')
+    path('about/', AboutView, name='about'),
+    path('404/', errorpage, name='error')
 ]

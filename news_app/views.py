@@ -205,4 +205,5 @@ class SearchResultsList(ListView):
         return News.objects.filter(
             Q(title__icontains=query) | Q(body__icontains=query)
         )
-
+def errorpage(request):
+    return render(request, 'news/404.html')
